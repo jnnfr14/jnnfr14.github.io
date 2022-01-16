@@ -1,0 +1,651 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!</title>
+	<link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+body{
+	font-family: 'Alata', sans-serif;
+	background-color: #8ccff5;
+}
+
+h1{
+	margin-top: 50px;
+	text-align: center;
+	font-size: 60px;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.welcome{
+	text-align: center;
+	font-family: 'Dancing Script', cursive;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}
+
+.gambaratas .background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.bawahan{
+	background-color: #8ccff5;
+	position: relative;
+}
+
+.bawahan2{
+	background-color: #7DB9DB;
+	position: relative;
+}
+
+.judul{
+	text-align: center;
+}
+
+
+
+.judul img{
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	justify-content: center;
+	margin: 30px;
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 
+}
+
+.desc{
+	text-align: center;
+	padding: 20px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.skills{
+	text-align: center;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+.skillslist{
+	background-color: #ffc0cb;
+	border-radius: 50%;
+	margin: 15px;
+	width: 150px;
+	height: 150px;
+	padding-top: 60px;
+	padding-left: 20px;
+	font-size: 50px;
+	box-shadow: -5px 10px 18px -1px rgba(128,68,78,0.52);
+	perspective: 1000px;
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.skillslist:hover{
+	background-color: #FFA6B5;
+	transition: 0.5s;
+}
+
+.skillslist-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+	display: hidden;
+}
+
+.skillslist:hover .skillslist-inner {
+	transform: rotateY(180deg);
+}
+
+.skillslist-front, .skillslist-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.skillslist-front {
+	color: black;
+}
+
+.skillslist-back {
+	transform: rotateY(180deg);
+}
+
+.kotakservice{
+	text-align: center;
+	background-color: #8ccff5;
+	box-shadow: 0 4px 10px 0 #4F88A8, 0 6px 20px 0 #4F88A8;
+	margin-bottom: 50px;
+	padding: 10px;
+	transition: 0.5s all;
+}
+
+.kotakservice:hover {
+    transform: scale(1.1);
+    color: #0d445f;
+}
+
+.kotakservice .fa{
+	font-size: 100px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.kotakservice p{
+	font-family: 'Balsamiq Sans', cursive;
+	margin-top: 10px;
+}
+
+.contactarea .fa{
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.contactarea span{
+	font-size: 20px;
+	margin-left: 10px;
+}
+
+.sosmed li{
+    display: inline-block;
+}
+
+.sosmed li a{
+    display: block;
+    margin-right: 20px;
+    color: #C4D7E1;
+    transition: 0.5s ease;
+}
+
+.sosmed li a:hover{
+    color: #375261;
+}
+
+.link{
+	text-decoration: none;
+	color: #C4D7E1;
+	transition: 0.5s ease;
+	margin-left: 40px;
+}
+
+.link:hover{
+	color: #375261;
+}
+
+.logoutarea{
+	text-align: center;
+}
+
+.logoutarea h1{
+	margin-top: 100px;
+	font-family: 'Dancing Script', cursive;
+	font-weight: 500;
+	font-size: 100px;
+}
+
+.logoutarea p{
+	margin-top: -60px;
+	letter-spacing: 2px;
+	margin-bottom: 50px;
+}
+
+.mySlides {
+	display: none;
+	transition: 1s;
+	animation-name: fade;
+ 	animation-duration: 0.5s;
+}
+
+
+@keyframes fade {
+  0%{
+  	opacity: 0.2;
+  }
+
+  25%{
+  	opacity: 0.4;
+  }
+
+  50%{
+  	opacity: 0.6;
+  }
+
+  75%{
+  	opacity: 0.8;
+  }
+
+  100%{
+  	opacity: 1;
+  }
+}
+
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+}
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 3px;
+	user-select: none;
+}
+
+
+.next {
+	right: 0;
+}
+
+
+.prev:hover, .next:hover {
+	opacity: 0.2;
+}
+
+.descc{
+	float: right;
+}
+
+.descc h1{
+	text-align: left;
+	font-size: 50px;
+}
+
+.descc p {
+	font-family: 'Balsamiq Sans', cursive;
+}
+
+.hobby{
+	margin-bottom: 100px;
+}
+
+.hobby a{
+	text-decoration: none;
+}
+
+img {
+	width:500px;
+	height: 500px;
+	margin-left: 50px;
+}
+
+.logout a{
+	text-align: center;
+	color: white;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #5784ba;
+	border-radius: 50px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.logout a:hover{
+	color:white;
+	background-color: #2a69b5;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent; 
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: #436375; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #1F2D36; 
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="gambaratas">
+        <div class="background-img" style="background-image: url('./img/background.jpg');"></div>
+</div>							
+<header>
+	<div class="container" style="position : relative;">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="welcome">
+					<h1 style="font-size: 80px; font-weight: normal;"> Welcome <?php echo "$nama"; ?>!</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="bawahan">
+	<div class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="judul">
+						<h1>Who Am I?</h1>
+						<img src="./img/myself.jpg" style="margin-top: 0">
+					</div>
+					<div class="desc">
+						<p>Hello! my name is Jennifer and I'm 16 years old. I'm from Indonesia, Kalimantan barat, Pontianak. I currently study at Immanuel Vocational High School in computer class. I really like to Design and draw something and now I learning some programming stuff. I still not good enough in this two aspect but I try to always improve myself as much as posible. I hope you like my page and offer! but before that, lets get to know myself first.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="skills">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="skillsarea">
+
+						<h1>Skills</h1>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2 style="margin-left: -15px; padding-left: 10px;">HTML</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>50%</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2>CSS</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>40%</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2>JS</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>10%</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2>AI</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>60%</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2>PS</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>40%</h2>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-2 skillslist" style="float: left; margin-top: 0;">
+							<div class="skillslist-inner">
+								<div class="skillslist-front">
+									<h2>XD</h2>
+								</div>
+								<div class="skillslist-back">
+									<h2>50%</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="services">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1>Services</h1>
+					<div class="col-lg-4" style="float: left;">
+						<div class="kotakservice">
+							<i class="fa fa-paint-brush"></i>
+							<h2>Grafic Design</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4" style="float: left;">
+						<div class="kotakservice">
+							<i class="fa fa-code"></i>
+							<h2>Web Design</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+
+					<div class="col-lg-4" style="float: left;">
+						<div class="kotakservice">
+							<i class="fa fa-database"></i>
+							<h2>Database</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="hobby">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="hobbyarea">
+						<h1>Hobbies</h1>
+						<div class="slideshow-container">
+							<div class="mySlides">
+							 	<div class="background2">
+							  		<img src="./img/image1.jpg" >
+							  		<div class="descc" style="float: right;">
+								  		<h1 style="margin-right: 100px; ">Like To <br> Taking Notes</h1>
+								  		<p>
+								  		this is one of my very very usefull hobby<br>
+								  		because of this, i can learn many things<br>
+								  		and i ussually taking a notes about my school<br>
+								  		subject. i've done many subject like math,<br>
+								  		english, mandarin, even a productive subject<br>
+								  		like grafic design and programming stuff<br><br>
+								  		This is some of my notes!
+										</p>
+										<a href="https://drive.google.com/drive/folders/1jPEiJfTZLLJG-rW16_leFy8I1jPmnfAV?usp=sharing" target="_blank">My Work</a>
+							  		</div>
+								</div>
+							</div>
+
+							<div class="mySlides">
+							  <div class="background2">
+							  		<img src="./img/image2.jpg" >
+							  		<div class="descc" style="float: right;">
+								  		<h1 style="margin-right: 120px; ">Like To Draw</h1>
+										  <p>
+										  this is my hobby since i'm in kindergarden<br>
+										  but i not really into it right now because i think<br>
+										  my skills is not as good as before. But<br>
+										  in my free time i like to draw random and simple<br>
+										  stuff. Because i like drawing, its make me like<br>
+										  grafic design to! But i don't really do it<br>
+										  because i don't have enough time to do that<br>
+										  especially when i have to choose what color<br>
+										  and font i should use.<br><br>
+										  This is some of my draws!
+										</p>
+										<a href="https://drive.google.com/drive/folders/1--aG10iVvi_RRL-rdfMEXIUcU4KKEcPk?usp=sharing" target="_blank">My Work</a>
+							  		</div>
+								</div>
+							</div>
+
+							<div class="mySlides">
+							  <div class="background2">
+							  		<img src="./img/image3.jpg" >
+							  		<div class="descc" style="float: right;">
+								  		<h1 style="margin-top:20px; margin-right: 110px; ">Like <br> Photography</h1>
+										  <p>
+										  this is my random and favorite hobby because<br>
+										  i really like to taking picture but i'm not<br>
+										  that profesional and good (for me) because<br>
+										  I didn't learn any technique and elements in<br>
+										  photography. But i enjoy it so much! I love<br>
+										  to take pitures of sky, flowers, aesthetic<br>
+										  place and many again especially in outdoor!<br><br>
+										  This is some of my results!
+										</p>
+										<a href="https://drive.google.com/drive/folders/1-62zA5zMG1YU78GRKHEn-retVeGk_0dQ?usp=sharing" target="_blank">My Work</a>
+							  		</div>
+								</div>
+							</div>
+
+							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+							</div>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="bawahan2">
+	<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="contactarea">
+						<h1>Contact Me!</h1>
+
+						<div class="col-lg-4" style="float: left; padding: 30px; margin-left: 0px;">
+							<i class="fa fa-envelope"></i> <span>E-mail</span> <br>
+							<a class="link" href="mailto:jennifer.6709@ski.sch.id" style="text-decoration: none;">Jennifer.6709@ski.sch.id</a>
+						</div>
+
+						<div class="col-lg-4" style="float: left; padding: 30px;">
+							<i class="fa fa-phone"></i> <span>Telephone Number</span> <br>
+							<a class="link" href="tel:+62895702101191" style="text-decoration: none;">+62895702101191</a>
+						</div>
+
+						<div class="col-lg-4" style="float: left; padding: 30px;">
+							<i class="fa fa-share-alt"></i> <span>Social Media</span> <br>
+							<ul class="sosmed">
+								<li><a href="http://www.instagram.com/jnnfr14"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="logout">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="logoutarea">
+							<h1>Thanks For Coming!</h1>
+							<p>Logout if you want</p>
+							<a href="logout.php">Logout</a>
+						</div>
+						<p style="text-align: center;margin-top: 50px;margin-bottom: 50px;">Jennifer XI TKJ 3</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
